@@ -44,7 +44,7 @@ var cities = {
         'lat': '41.2889',
         'lng': '174.7772',
         'name': 'Wellington',
-        'country': 'New Zeland',
+        'country': 'New Zealand',
         'forecast': false
     }
 }
