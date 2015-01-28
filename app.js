@@ -109,8 +109,8 @@ app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {
         message: err.message,
-        error: err
+        error: process.env.NODE_ENV === 'dev' ? err : ''
     });
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
