@@ -1,1 +1,8 @@
-Index
+<ul class="cities">
+{{#each cities}}
+    <li>
+        <h2>{{name}}</h2>
+        <i class="wi wi-{{forecast.currently.icon}}"></i>
+    </li>
+{{/each}}
+</ul>
