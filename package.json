@@ -5,14 +5,15 @@
   "scripts": {
     "start": "node app.js"
   },
+  "engines": {
+    "node": "0.10.x"
+  },
   "dependencies": {
     "bluebird": "^2.9.3",
     "express": "~4.11.1",
     "express-handlebars": "^1.1.0",
     "moment": "^2.9.0",
-    "needle": "^0.7.10"
-  },
-  "devDependencies": {
+    "needle": "^0.7.10",
     "broccoli": "^0.13.3",
     "broccoli-bower": "^0.2.1",
     "broccoli-merge-trees": "^0.2.1",
