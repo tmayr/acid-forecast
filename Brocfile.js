@@ -2,6 +2,7 @@ var compileSass = require('broccoli-sass');
 var mergeTrees = require('broccoli-merge-trees');
 var findBowerTrees = require('broccoli-bower');
 var pickFiles = require('broccoli-static-compiler');
+var autoprefixer = require('broccoli-autoprefixer');
 
 var extraAssets = pickFiles('bower_components/weather-icons', {
      srcDir: '/',
@@ -21,5 +22,7 @@ var appCss = compileSass(
     'assets/css/app.css',
     { outputStyle: 'compressed'}
 );
+
+appCss = autoprefixer(appCss)
 
 module.exports = mergeTrees([appCss, extraAssets]);
