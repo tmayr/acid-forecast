@@ -55,18 +55,17 @@ function build_forecast_city_uri(city){
 
 function get_time_lightness(hours){
     hours = parseInt(hours, 10);
+    var hsl_value = 10;
 
     // 10 is the lowest lightness value we'll show
     if(hours <= 15){
         // 70/15 because thats how fast we want 15 hours to pass, each hour is 70/15 light
-        var hsl_value = hours * (70/15);
-        hsl_value = Math.max(10, hsl_value);
+        hsl_value = hours * (70/15);
     }else{
         // 100/9 because thats how fast we want 9 hours to pass
-        var hsl_value = 100 - (hours * (100/9));
-        hsl_value = Math.max(10, hsl_value);
+        hsl_value = 100 - (hours * (100/9));
     }
-    return hsl_value;
+    return Math.max(10, hsl_value);
 }
 
 app.get('/', function(req, res) {
