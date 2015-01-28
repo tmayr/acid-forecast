@@ -68,9 +68,11 @@ function get_time_lightness(hours){
 }
 
 app.get('/', function(req, res) {
+
   // we return a needle promise for each city and wait for each to finish to assign them to their city, and all of them to finish before we render
   Promise.map(Object.keys(cities), function(city){
     var city = cities[city];
+
     return (
         needle
             .getAsync(build_forecast_city_uri(city))
@@ -79,8 +81,8 @@ app.get('/', function(req, res) {
 
                 // parse some data into useful formats to display
                 city.forecast.currently.humidity = Math.floor(city.forecast.currently.humidity * 100);
-                city.forecast.currently.temperature = Math.floor(city.forecast.currently.temperature * 100);
-                city.forecast.currently.apparentTemperature = Math.floor(city.forecast.currently.apparentTemperature * 100);
+                city.forecast.currently.temperature = Math.floor(city.forecast.currently.temperature);
+                city.forecast.currently.apparentTemperature = Math.floor(city.forecast.currently.apparentTemperature);
 
                 var datetime = moment.unix(city.forecast.currently.time).utc().add(city.forecast.offset, 'hours');
                 city.forecast.currently.time = datetime.format('HH:mm DD/MM/YY');
