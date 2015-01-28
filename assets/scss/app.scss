@@ -1,3 +1,40 @@
 @import "vendor/normalize";
 
-body{ background: blue; }
+*{
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+body, html{ height: 100%; }
+
+body{
+    background: #333;
+    display: flex;
+}
+
+.cities{
+    margin: auto;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex: 1;
+
+    li{
+        height: 200px;
+        padding: 10px;
+        background: #666;
+        color: white;
+        text-align: center;
+
+        flex: 1;
+    }
+}
+
+// using forecast io icon definitons and mapping them to weather-icons values when they dont exist
+// forecast values: clear-day, clear-night, rain, snow, sleet, wind, fog, cloudy, partly-cloudy-day, or partly-cloudy-night
+.wi-clear-day:before{ content: "\f00d"; }
+.wi-clear-night:before{ content: "\f02e"; }
+.wi-wind:before{ content: "\f021"; }
+.wi-partly-cloudy-day:before{ content: "\f002"; }
+.wi-partly-cloudy-night:before{ content: "\f083"; }

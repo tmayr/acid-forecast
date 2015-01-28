@@ -1,0 +1,19 @@
+{
+  "name": "acid_challenge",
+  "version": "0.0.1",
+  "authors": [
+    "Tomas Mayr <tmayr@tmayr.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "weather-icons": "~1.3.2"
+  }
+}
