@@ -68,7 +68,6 @@ function get_time_lightness(hours){
 }
 
 app.get('/', function(req, res) {
-
   // we return a needle promise for each city and wait for each to finish to assign them to their city, and all of them to finish before we render
   Promise.map(Object.keys(cities), function(city){
     var city = cities[city];
