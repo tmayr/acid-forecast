@@ -1,8 +1,12 @@
 <ul class="cities">
 {{#each cities}}
-    <li>
-        <h2>{{name}}</h2>
+    <li style="background-color: hsla(200, 100%, {{forecast.currently.hsl_value}}%, 1) ">
+        <h2>{{name}} <small>{{country}}</small></h2>
         <i class="wi wi-{{forecast.currently.icon}}"></i>
+        <p>Temperature: {{forecast.currently.temperature}}ºC</p>
+        <p>Feels Like: {{forecast.currently.apparentTemperature}}ºC</p>
+        <p>Humidity: {{forecast.currently.humidity}}%</p>
+        <p>Time: {{ forecast.currently.time }}</p>
     </li>
 {{/each}}
 </ul>
