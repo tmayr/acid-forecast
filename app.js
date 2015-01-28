@@ -63,7 +63,7 @@ function get_time_lightness(hours){
         hsl_value = hours * (70/15);
     }else{
         // 100/9 because thats how fast we want 9 hours to pass
-        hsl_value = 100 - (hours * (100/9));
+        hsl_value = ((24 - hours) * (70/9));
     }
     return Math.max(10, hsl_value);
 }
