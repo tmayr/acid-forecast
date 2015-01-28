@@ -1,6 +1,7 @@
 {
   "name": "acid_challenge",
   "version": "0.0.1",
+  "main": "app.js",
   "dependencies": {
     "bluebird": "^2.9.3",
     "express": "~4.11.1",
