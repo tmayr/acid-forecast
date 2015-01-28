@@ -4,5 +4,12 @@
   "dependencies": {
     "express": "~4.11.1",
     "express-handlebars": "^1.1.0"
+  },
+  "devDependencies": {
+    "broccoli": "^0.13.3",
+    "broccoli-bower": "^0.2.1",
+    "broccoli-merge-trees": "^0.2.1",
+    "broccoli-sass": "^0.3.3",
+    "node-sass": "~1.2.3"
   }
 }

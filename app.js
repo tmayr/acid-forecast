@@ -1,5 +1,6 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
+var broccoli_middlware = require('broccoli-middleware');
 
 var app = express();
 
@@ -9,6 +10,10 @@ app.set('view engine', 'handlebars');
 app.get('/', function(req, res) {
   res.render("index");
 });
+
+
+// using the middleware as an assets pipeline, pretty cool
+app.use(broccoli_middlware);
 
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
